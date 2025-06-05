@@ -6,7 +6,10 @@ namespace Hello_World
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Jenkins!");
+            var greetingService = new GreetingService();
+            string message = greetingService.GetGreeting();
+            
+            Console.WriteLine(message);
             Console.Read();
         }
     }
